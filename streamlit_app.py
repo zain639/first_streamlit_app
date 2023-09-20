@@ -32,7 +32,8 @@ try:
       st.dataframe(fruityvice_normalized)
       
 except URLError as e:
-st.stop()
+    st.error()
+
 
 
 my_cnx = snowflake.connector.connect(**st.secrets["snowflake"])
